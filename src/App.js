@@ -1,8 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import {MiPrimerEstado} from './components/MiPrimerEstado';
+import { EjercicioUnoComponente } from './components/EjercicioUnoComponente';
 
 function App() {
+
+  var anioActual = new Date().getFullYear();
+  alert(anioActual);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,7 +16,14 @@ function App() {
           El estado en React - Hook UseState
         </h1>
 
-        <MiPrimerEstado/>
+        <div className='componentes'>
+
+          <hr/>
+          <EjercicioUnoComponente anioActual={anioActual}/>
+          <hr/>
+          <MiPrimerEstado/>
+
+        </div>
 
       </header>
     </div>

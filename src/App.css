@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.btn1{
+  grid-area: bt1;
+}
+
+.btn2{
+  grid-area: bt2;
+}
+
+.ejercicio-uno h1{
+  grid-area: hd;
+}
+
+.ejercicio-uno{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: 
+    "hd hd"
+    "bt1 bt2";
+}
