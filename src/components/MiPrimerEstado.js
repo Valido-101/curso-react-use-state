@@ -14,8 +14,8 @@ export const MiPrimerEstado = () => {
   //usando el método a la derecha de la coma
   const [nombre, setNombre] = useState("Jesús Valido");
 
-  const cambiarNombre = (e) => {
-    setNombre("Pepito");
+  const cambiarNombre = (e, nombreFijo) => {
+    setNombre(nombreFijo);
   }
 
   return (
@@ -25,7 +25,9 @@ export const MiPrimerEstado = () => {
             {nombre}
         </strong>
         &nbsp;
-        <button onClick={ cambiarNombre }>Cambiar</button>
+        <button onClick={ e => {cambiarNombre(e, "Pepa")} }>Cambiar</button>
+
+        <input type="text" onChange={ e => {cambiarNombre(e, e.target.value)}} placeholder='Cambia el nombre'></input>
     </div>
   )
 }
